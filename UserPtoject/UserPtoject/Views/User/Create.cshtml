@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using UserPtoject.Models
+@model User
+
+<form asp-action="Create" asp-controller="User" method="post">
+
+    <div>
+        <label>Adınız</label>
+        <input type="text" asp-for=@Model.Name />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Soyadınız</label>
+        <input type="text" asp-for=@Model.LastName />
+    </div>
+
+    <br />
+
+    <div>
+        <button>
+            Kaydet
+        </button>
+    </div>
+
+    <div>
+        @ViewBag.ErrorMessage
+    </div>
+
+</form>
